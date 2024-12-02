@@ -1,0 +1,353 @@
+{
+  "_format": "hh-sol-artifact-1",
+  "contractName": "DiamondABI",
+  "sourceName": "hardhat-diamond-abi/HardhatDiamondABI.sol",
+  "abi": [
+    {
+      "inputs": [],
+      "name": "Ownable__NotOwner",
+      "type": "error"
+    },
+    {
+      "inputs": [],
+      "name": "Ownable__NotTransitiveOwner",
+      "type": "error"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "previousOwner",
+          "type": "address"
+        },
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "newOwner",
+          "type": "address"
+        }
+      ],
+      "name": "OwnershipTransferred",
+      "type": "event"
+    },
+    {
+      "inputs": [
+        {
+          "components": [
+            {
+              "internalType": "bool",
+              "name": "isPaused",
+              "type": "bool"
+            },
+            {
+              "internalType": "uint256",
+              "name": "transactionFee",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint256",
+              "name": "feeDenominator",
+              "type": "uint256"
+            },
+            {
+              "internalType": "address",
+              "name": "pythContract",
+              "type": "address"
+            }
+          ],
+          "internalType": "struct TProject",
+          "name": "_params",
+          "type": "tuple"
+        }
+      ],
+      "name": "initProject",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_addr",
+          "type": "address"
+        }
+      ],
+      "name": "setFeeReceiver",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "components": [
+            {
+              "internalType": "bool",
+              "name": "isValid",
+              "type": "bool"
+            },
+            {
+              "internalType": "bool",
+              "name": "isBase",
+              "type": "bool"
+            },
+            {
+              "internalType": "bytes32",
+              "name": "priceId",
+              "type": "bytes32"
+            },
+            {
+              "internalType": "uint8",
+              "name": "decimals",
+              "type": "uint8"
+            },
+            {
+              "internalType": "uint256",
+              "name": "pricePercentage",
+              "type": "uint256"
+            },
+            {
+              "internalType": "address",
+              "name": "tokenAddress",
+              "type": "address"
+            }
+          ],
+          "internalType": "struct TToken[]",
+          "name": "_params",
+          "type": "tuple[]"
+        }
+      ],
+      "name": "setTokens",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "InvalidInput",
+      "type": "error"
+    },
+    {
+      "inputs": [],
+      "name": "InvalidPrice",
+      "type": "error"
+    },
+    {
+      "inputs": [],
+      "name": "MathOverflowedMulDiv",
+      "type": "error"
+    },
+    {
+      "inputs": [],
+      "name": "Overflow_0x11",
+      "type": "error"
+    },
+    {
+      "inputs": [],
+      "name": "ReentrancyGuard__ReentrantCall",
+      "type": "error"
+    },
+    {
+      "inputs": [
+        {
+          "components": [
+            {
+              "internalType": "bool",
+              "name": "isBuy",
+              "type": "bool"
+            },
+            {
+              "internalType": "bytes[]",
+              "name": "updateData",
+              "type": "bytes[]"
+            },
+            {
+              "internalType": "uint256",
+              "name": "amount",
+              "type": "uint256"
+            },
+            {
+              "internalType": "address",
+              "name": "baseToken",
+              "type": "address"
+            },
+            {
+              "internalType": "address",
+              "name": "quoteToken",
+              "type": "address"
+            }
+          ],
+          "internalType": "struct TSwap",
+          "name": "_params",
+          "type": "tuple"
+        }
+      ],
+      "name": "swap",
+      "outputs": [],
+      "stateMutability": "payable",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "baseAmount",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "baseAmountPercentage",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "basePrice_",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "int64",
+          "name": "price",
+          "type": "int64"
+        },
+        {
+          "internalType": "int32",
+          "name": "expo",
+          "type": "int32"
+        },
+        {
+          "internalType": "uint8",
+          "name": "targetDecimals",
+          "type": "uint8"
+        }
+      ],
+      "name": "convertToUint",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "pure",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "getPrices",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "base",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "quote",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "baseP",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "goldP",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "h",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "quoteAmount",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "quotePrice_",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "bool",
+          "name": "_isBuy",
+          "type": "bool"
+        },
+        {
+          "internalType": "uint256",
+          "name": "_size",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "_divisor",
+          "type": "uint256"
+        },
+        {
+          "internalType": "bytes[]",
+          "name": "_pythUpdateData",
+          "type": "bytes[]"
+        }
+      ],
+      "name": "swap",
+      "outputs": [],
+      "stateMutability": "payable",
+      "type": "function"
+    }
+  ],
+  "deployedBytecode": "",
+  "bytecode": "",
+  "linkReferences": {},
+  "deployedLinkReferences": {}
+}
